@@ -24,3 +24,6 @@ Models smart home entities: rooms, devices, sensors, observations, automation ru
 
 ## Deliverables
 - `SmartHome.owl`: Main OWL 2 file [web:5]
+
+## Contacts
+simone.dario@studenti.univr.it
