@@ -1,0 +1,906 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/simone/ontologies/2026/SmartHome/"
+     xml:base="http://www.semanticweb.org/simone/ontologies/2026/SmartHome/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SmartHome="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#aboutDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#aboutDevice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#aboutRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#aboutRoom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#actsOnDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#actsOnDevice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#adjacentTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#adjacentTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#connectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#connectedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#containsDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#containsDevice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#locatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#controls -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#controls">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Controller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#generatedByRule -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#generatedByRule">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#AutomationRule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#AutomationRule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasActuator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasActuator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Controller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Actuator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasCondition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#AutomationRule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasConsumptionRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasConsumptionRecord">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#EnergyConsumptionRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasObservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasObservation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasRoom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasRule -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasRule">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#AutomationRule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasUser">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasZone -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasZone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#inZone -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#inZone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#isRoomOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#isRoomOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#isZoneOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#isZoneOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Zone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#locatedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#makesObservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#makesObservation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Sensor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#observedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#observedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#observedInRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#observedInRoom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ownedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ownedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ownsDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ownsDevice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#receivesNotification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#receivesNotification">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#relatedToAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#relatedToAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#relatedToCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#relatedToCondition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#sentToUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#sentToUser">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#triggersAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#triggersAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Condition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#areaSqm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#areaSqm">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#consumptionKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#consumptionKwh">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#EnergyConsumptionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#deviceId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#deviceId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#firmwareVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#firmwareVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#floorNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#floorNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#hasValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#isOnline -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#isOnline">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#manufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#messageText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#messageText">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#modelName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#modelName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#observedAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#observedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#recordedAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#recordedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#EnergyConsumptionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#roomName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#roomName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ruleName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ruleName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#AutomationRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Actuator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Appliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Appliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#AutomationRule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#AutomationRule"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Building"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Condition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Controller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Controller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#EnergyConsumptionRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#EnergyConsumptionRecord"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#HumidityObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#HumidityObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#MonitoredRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#MonitoredRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#containsDevice"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Sensor"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#MotionObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#MotionObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Sensor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#makesObservation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#TemperatureObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#TemperatureObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Zone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Zone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#actTurnOnLamp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#actTurnOnLamp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Action"/>
+        <SmartHome:actsOnDevice rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#lampLiving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#alice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#alice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
+        <SmartHome:receivesNotification rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#notif1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#bedroom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#bedroom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <SmartHome:inZone rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#zoneFirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#condMotionInLiving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#condMotionInLiving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Condition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#kitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <SmartHome:containsDevice rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#tempSensorKitchen"/>
+        <SmartHome:inZone rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#zoneGroundFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#lampLiving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#lampLiving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Actuator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#livingRoom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#livingRoom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <SmartHome:containsDevice rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#lampLiving"/>
+        <SmartHome:containsDevice rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#motionSensorLiving"/>
+        <SmartHome:containsDevice rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#thermostat"/>
+        <SmartHome:inZone rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#zoneGroundFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#motionObs1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#motionObs1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#MotionObservation"/>
+        <SmartHome:observedInRoom rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#livingRoom"/>
+        <SmartHome:hasUnit>boolean</SmartHome:hasUnit>
+        <SmartHome:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SmartHome:hasValue>
+        <SmartHome:observedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-02-18T00:10:00</SmartHome:observedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#motionSensorLiving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#motionSensorLiving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <SmartHome:makesObservation rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#motionObs1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#myHome1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#myHome1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+        <SmartHome:hasRoom rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#bedroom1"/>
+        <SmartHome:hasRoom rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#kitchen"/>
+        <SmartHome:hasRoom rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#livingRoom"/>
+        <SmartHome:hasRule rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ruleMotionLight"/>
+        <SmartHome:hasUser rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#alice"/>
+        <SmartHome:hasZone rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#zoneFirstFloor"/>
+        <SmartHome:hasZone rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#zoneGroundFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#notif1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#notif1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+        <SmartHome:aboutRoom rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#livingRoom"/>
+        <SmartHome:generatedByRule rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ruleMotionLight"/>
+        <SmartHome:messageText>Motion detected in living room. Lamp turned on.</SmartHome:messageText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ruleMotionLight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ruleMotionLight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#AutomationRule"/>
+        <SmartHome:hasAction rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#actTurnOnLamp"/>
+        <SmartHome:hasCondition rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#condMotionInLiving"/>
+        <SmartHome:ruleName>Turn on living room lamp when motion detected</SmartHome:ruleName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#tempObs1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#tempObs1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#TemperatureObservation"/>
+        <SmartHome:observedInRoom rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#kitchen"/>
+        <SmartHome:hasUnit>C</SmartHome:hasUnit>
+        <SmartHome:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.5</SmartHome:hasValue>
+        <SmartHome:observedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-02-18T00:10:00</SmartHome:observedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#tempSensorKitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#tempSensorKitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+        <SmartHome:makesObservation rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#tempObs1"/>
+        <SmartHome:ownedBy rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#alice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#thermostat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#thermostat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Controller"/>
+        <SmartHome:controls rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#lampLiving"/>
+        <SmartHome:ownedBy rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#alice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#zoneFirstFloor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#zoneFirstFloor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Zone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#zoneGroundFloor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#zoneGroundFloor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Zone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Action"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#AutomationRule"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Building"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Condition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#EnergyConsumptionRecord"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Notification"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Zone"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Actuator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Appliance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Controller"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Sensor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Building"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Home"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Zone"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#HumidityObservation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#MotionObservation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#TemperatureObservation"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
