@@ -23,7 +23,7 @@ Models smart home entities: rooms, devices, sensors, observations, automation ru
 5. **Inverse properties**: tempSensorKitchen locatedIn kitchen (from containsDevice inverse)
 
 ## Deliverables
-- `SmartHome.owl`: Main OWL 2 file [web:5]
+- `SmartHome.owl`: Main OWL 2 file
 
 ## Contacts
 simone.dario@studenti.univr.it
