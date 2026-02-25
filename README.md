@@ -40,7 +40,5 @@ OWL 2 DL ontology modeling smart home IoT: rooms, devices (sensors/actuators), o
 ![Inferred Class Hierarchy](screenshots/class_hierarchy_1.png)
 
 
-**OWL 2 DL ✓ Consistent ✓ Protégé 5.5+**
-
 ---
 **Simone Dario** - simone.dario@studenti.univr.it
