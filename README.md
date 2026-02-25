@@ -35,8 +35,10 @@ OWL 2 DL ontology modeling smart home IoT: rooms, devices (sensors/actuators), o
 2. Reasoner→HermiT→Start
 3. **Inferences**: `tempSensorKitchen`→`Sensor`, `kitchen`→`MonitoredRoom`, `locatedIn kitchen` (inverse)
 
-![Individual Inferences - tempSensorKitchen as Sensor][screenshots/individual_inference.png]
-![Inferred Class Hierarchy][screenshots/class_hierarchy_1.png]
+![Individual Inferences - tempSensorKitchen as Sensor](screenshots/individual_inference.png)
+
+![Inferred Class Hierarchy](screenshots/class_hierarchy_1.png)
+
 
 **OWL 2 DL ✓ Consistent ✓ Protégé 5.5+**
 
