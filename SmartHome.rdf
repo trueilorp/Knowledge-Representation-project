@@ -269,6 +269,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#ownedBy">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
     </owl:ObjectProperty>
@@ -556,7 +557,11 @@
 
     <!-- http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Device">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Observation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#Room"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simone/ontologies/2026/SmartHome#User"/>
+    </owl:Class>
     
 
 
